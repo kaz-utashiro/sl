@@ -1,0 +1,3 @@
+[submodule "mtoyoda"]
+	path = mtoyoda
+	url = https://github.com/mtoyoda/sl.git
