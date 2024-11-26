@@ -14,3 +14,7 @@
 - https://creazy.net/2008/02/sl_js.html
 - https://creazy.net/2008/02/sl_js_toyodamasashi_in_twitter.html
 - https://www.tkl.iis.u-tokyo.ac.jp/~toyoda/sl/links.html
+
+## JUNET生誕40周年記念シンポジウム
+
+- [スライド](https://kaz-utashiro.github.io/sl/junet40th/junet40th.pdf)
