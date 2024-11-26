@@ -13,8 +13,8 @@ theme: default
 # こんなのが走る
 ```
 char *ban[] = {
-    "      o \0\0\0\0",
-    "     o \0\0\0\0\0",
+    "      o     ",
+    "     o      ",
     "    o  ____ ",
     "   --  |OO| ",
     "  _||__|  | ",
@@ -37,17 +37,22 @@ char *ban[] = {
   - 9600bps RS232-C 接続
 
 ---
-# 開発ソースを発見！
+# 開発ソースを発見
 ![](img/1985.png)
 
 `sl.org.c` と `sl.c` という2つのファイルがある。
 
 ---
 # 1985-08-10 は...
-![h:600](img/1985-cal.png)
+
+![w:700](img/1985-cal.png)
+
+- 土曜日だった
+- 仕事でもないのに休日出勤して作ってたらしい
+- しかも終電ギリギリ
 
 ---
-# sl.orig.c - curses library を使っている
+# sl.org.c - curses library を使っている
 ```
     for (i=0; i <= width; i++) {
             for (j=0; j < 7; j++) {
@@ -89,12 +94,12 @@ char *ban[] = {
 ---
 # SIG_IGN 問題
 
-- 開発ソースに `signal` の呼び出しは残っていない。
-- fj に投稿する直前に入れたんじゃないだろうか
+- 開発ソースでは `^C` で穏やかに終了するようになっている
+- fj に投稿する直前に無視するコードを入れたのかも
 - でも `/* コメントアウト */` してた
 
 ---
-# 進化を続ける sl
+# sl その後
 
 ---
 # 2010年版
@@ -115,13 +120,33 @@ char *sl[] = {
 ```
 
 ---
-# 2010年版
+# 煙が残る
 ![h:600](img/sl-2010.png)
 
 ---
-# 2011年 jslinux 版
+# 2010年版の欠陥
+走り終わっても画面を消さないために、終了処理をサボっている。
+```
+int main()
+{
+        int x, y;
+        initscr();
+        for (x = COLS - 13; x > 0; x -= 2) {
+                for (y = 0; y < 7; y++)
+                        mvprintw(y + LINES - 7, x, "%s", sl[y]);
+                refresh();
+                usleep(100000);
+        }
+        /* endwin(); */
+}
+```
+そのため、実行後に端末をリセットしないと使えない。
 
-![h:600](img/sl-jslinux.png)
+---
+# 2011年 jslinux 版
+jslinux で sl 動かないと twitter でカラまれたので移植した
+
+![h:500](img/sl-jslinux.png)
 
 ---
 # 2023年版
@@ -154,21 +179,8 @@ char *sl[] = {
 
 ---
 # sl-2023.c
+2023年版では AI の助けを借りて端末リセット問題を解消
 ```
-#include <unistd.h>
-#include <string.h>
-#include <stdio.h>
-#include <term.h>
-```
-
----
-# sl-2023.c
-走り終わった後も画面を消さないために結構苦労している。
-```
-void mvprintw(int y, int x, const char* fmt, const char* str) {
-    tputs(tparm(tgoto(cursor_address, x, y)), 1, putchar);
-    printf(fmt, str);
-}
 char *sl[] = {
     "      o o o o",
     "     o       ",
@@ -205,8 +217,8 @@ int main() {
 
 ---
 # 豊田版 sl
-
-![h:500](img/toyoda-sl.png)
+端末エミュレーター前提なので遅延は問題にならない
+![w:550](img/toyoda-sl.png) ![w:550](img/toyoda-sl.gif)
 
 ---
 # mac 版
@@ -223,19 +235,19 @@ int main() {
 ![h:500](img/javascript.jpg)
 
 ---
-# vimperator 版
+# vimperator 版 for Firefox
 
 ![](img/vimperator.png)
 https://atmarkit.itmedia.co.jp/news/200909/07/sl01.png
 
 ---
 # https://github.com/kaz-utashiro/sl
-- submodule 化したw
+submodule 化したw
 ![](img/submodule.png)
 
 ---
-# 1997年に書いた雑文より
+# 1997年に吐いてた暴言
 
-    役に立たないものも作れないのに、役に立つものが作れるものか。
+    役に立たないものも作れなくて、役に立つものが作れるものか。
 
 ![](img/son.gif)
