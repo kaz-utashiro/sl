@@ -1,4 +1,6 @@
 ---
+title: sl
+author: utashiro
 marp: true
 theme: default
 ---
@@ -125,6 +127,7 @@ char *sl[] = {
 
 ---
 # 2010年版の欠陥
+![bg fit right:40%](img/sl-2010.png)
 走り終わっても画面を消さないために、終了処理をサボっている。
 ```
 int main()
@@ -248,6 +251,6 @@ submodule 化したw
 ---
 # 1997年に吐いてた暴言
 
-    役に立たないものも作れなくて、役に立つものが作れるものか。
+## 役に立たないものも作れなくて、役に立つものが作れるものか。
 
-![](img/son.gif)
+![bg fit right:42%](img/son.gif)
