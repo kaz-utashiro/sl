@@ -16,4 +16,7 @@
 
 ## JUNET生誕40周年記念シンポジウム
 
-- [スライド](https://kaz-utashiro.github.io/sl/junet40th/junet40th.pdf)
+### スライド
+
+  - [PDF](https://kaz-utashiro.github.io/sl/junet40th/junet40th.pdf)
+  - [HTML](https://kaz-utashiro.github.io/sl/junet40th/junet40th.html)
