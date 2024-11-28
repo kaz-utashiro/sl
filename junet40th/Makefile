@@ -1,14 +1,11 @@
-MARP=marp --allow-local-files
-TITLE=junet40th
+MARP  = marp --allow-local-files
+TITLE = junet40th
+EXT   = html pdf
+ALL   = $(foreach t,$(TITLE),$(foreach e,$(EXT),$t.$e))
 
-ALL=$(TITLE).html $(TITLE).pdf
 all: $(ALL)
 
-%.html: %.md
-	$(MARP) $<
-
-%.pdf: %.md
-	$(MARP) --pdf $<
+$(foreach e,$(EXT),$(eval %.$e: %.md ; $(MARP) --$e $$<))
 
 clean:
 	rm -f $(ALL)
