@@ -244,7 +244,7 @@ int main() {
 https://atmarkit.itmedia.co.jp/news/200909/07/sl01.png
 
 ---
-# https://github.com/kaz-utashiro/sl
+# https://github.com/tecolicom/sl
 submodule 化したw
 ![](img/submodule.png)
 

@@ -18,5 +18,5 @@
 
 ### スライド
 
-  - [PDF](https://kaz-utashiro.github.io/sl/junet40th/junet40th.pdf)
-  - [HTML](https://kaz-utashiro.github.io/sl/junet40th/junet40th.html)
+  - [PDF](https://tecolicom.github.io/sl/junet40th/junet40th.pdf)
+  - [HTML](https://tecolicom.github.io/sl/junet40th/junet40th.html)
