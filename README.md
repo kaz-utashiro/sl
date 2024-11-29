@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="img/sl-logo.png" width="140" />
+</div>
+
 ## LINKS
 
 - https://en.wikipedia.org/wiki/SL
@@ -16,7 +20,10 @@
 
 ## JUNET生誕40周年記念シンポジウム
 
+### 開催
+ - 2024年11月25日 15:00～19:30
+ - 東京大学山上会館
+- https://internetweek.jp/2024/archives/program/j2
 ### スライド
-
   - [PDF](https://tecolicom.github.io/sl/junet40th/junet40th.pdf)
   - [HTML](https://tecolicom.github.io/sl/junet40th/junet40th.html)
