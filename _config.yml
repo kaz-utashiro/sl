@@ -1,0 +1,18 @@
+title: sl
+description: sl command site
+url: "https://tecolicom.github.io/sl"
+baseurl: ""
+google_analytics: UA-47549010-1
+github_username: kaz-utashiro
+
+twitter:
+  username: uta46
+  card: /img/sl-image.png
+
+# デフォルトの front matter 設定
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image: /img/sl-image.png

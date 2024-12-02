@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="img/sl-logo-w.png" width="140" />
+  <img src="img/sl-image.png" width="280" />
 </div>
 
 ## REPOSITORY
