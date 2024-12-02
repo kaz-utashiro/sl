@@ -1,0 +1,12 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>{% if page.title %}{{ page.title | escape }} | {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  
+  <link rel="icon" type="image/png" href="{{ "/img/favicon-96x96.png" | relative_url }}">
+  
+  {% seo %}
+  
+  <meta name="twitter:image" content="{{ site.url }}{% if page.image %}{{ page.image }}{% else %}{{ site.defaults[0].values.image }}{% endif %}">
+</head>
