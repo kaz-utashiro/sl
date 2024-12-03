@@ -7,7 +7,7 @@ github_username: kaz-utashiro
 
 twitter:
   username: uta46
-  card: /img/sl-image.png
+  card: /sl/img/sl-image.png
 
 # デフォルトの front matter 設定
 defaults:
@@ -15,4 +15,4 @@ defaults:
     scope:
       path: ""
     values:
-      image: /img/sl-image.png
+      image: /sl/img/sl-image.png
